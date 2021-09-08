@@ -1,13 +1,37 @@
 .main {
     max-width: 900px;
-    background: teal;
+    background: rgba(0,0,0,0.1);
     margin: 20px auto;
     color: white;
     padding: 10px 20px;
-    border-radius: 20px;
+    border-radius: 4px;
+    font-family: 'Roboto Mono';
+    font-weight: 100;
+    font-size: 16px;
+}
+
+.main h1 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 100;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
 }
 
 .grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
+
+hr {
+    color: white;
+    border: none;
+}
+
+.results {
+    background: rgba(0,0,0,.3);
+    padding: 20px 30px;
+    border-radius: 2px;
+    margin-bottom: 10px;
+}
+

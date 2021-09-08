@@ -1,4 +1,5 @@
-import Button from "../../UI/InputField/Button/Button";
+import Button from "../../UI/Button/Button";
+import classes from './TipChooser.module.css'
 
 const TipChooser = (props) => {
 
@@ -6,8 +7,8 @@ const TipChooser = (props) => {
 
   return (
     <>
-        <p>Add a tip</p>
-        <Button title="No Tip" percentage="0" onClick={() => tipHandler(0)}/>
+        <h2 className={classes.title}>Add a tip</h2>
+        <Button title="None" percentage="0" onClick={() => tipHandler(0)}/>
         <Button title="10%" percentage="10" onClick={() => tipHandler(10)}/>
         <Button title="12%" percentage="12" onClick={() => tipHandler(12)}/>
         <Button title="15%" percentage="15" onClick={() => tipHandler(15)}/>

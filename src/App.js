@@ -17,7 +17,7 @@ const App = () => {
     const onChangePriceHandler = (event) => {
         setPeople(event.target.value)
     }
-    const onChangeTipHandler = (tip) => {
+    const onChangeTipHandler = (tip, button) => {
         setTipPercentage(tip)
     }
 
@@ -25,15 +25,16 @@ const App = () => {
     return (
         <div className={classes.main}>
             <h1>Split the Bill</h1>
+            <hr />
             <div className={classes.grid}>
                 <div>
+                    <InputField icon="€" id="price" type="number" name="price" onChange={onChangeBillHandler} title="The Bill" />
+                    <InputField icon="#" id="people" type="number" name="people" onChange={onChangePriceHandler} title="Number of People" />
                     <TipChooser onSaveTip={onChangeTipHandler} />
                     <p>Selected tip {tipPercentage}%</p> 
-                    <InputField id="price" type="number" name="price" onChange={onChangeBillHandler} title="The Bill" />
-                    <InputField id="people" type="number" name="people" onChange={onChangePriceHandler} title="Number of People" />
                 </div>
 
-                <div>
+                <div className={classes.results}>
                     <Result price={billPrice} people={people} tipPercentage={tipPercentage}/>
                 </div>
             </div>
