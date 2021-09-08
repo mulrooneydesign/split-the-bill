@@ -1,0 +1,10 @@
+.input-field {
+    display: block;
+}
+
+.input-field input {
+    display: block;
+    height: 44px;
+    font-size: 22px;
+    margin-bottom: 20px;
+}

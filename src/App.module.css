@@ -1,0 +1,13 @@
+.main {
+    max-width: 900px;
+    background: teal;
+    margin: 20px auto;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
