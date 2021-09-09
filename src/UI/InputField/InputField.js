@@ -11,6 +11,7 @@ const InputField = (props) => {
         name={props.name}
         onChange={props.onChange}
         step={props.step}
+        min={props.min}
         />
     </div>
   );
