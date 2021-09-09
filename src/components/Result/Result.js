@@ -15,9 +15,9 @@ const Result = ({price, tipPercentage, people}) => {
         <>
         <p>Cost per person without tip is: <strong>€{costPerPerson.toFixed(2)}</strong></p>
         <p>Add a tip of <strong>{tipPercentage}%</strong></p>
-        <h4>The Total is:</h4>
+        <h4>The total is:</h4>
         <p className={classes.result}><strong>€{totalWithTip.toFixed(2)}</strong></p>
-        <h4>The Total per person with tip is:</h4>
+        <h4>The total per person with tip is:</h4>
         <p className={classes.result}>€{totalPerPeronWithTip.toFixed(2)}</p>
         </>
     )
