@@ -1,7 +1,7 @@
 .input-field {
     display: block;
-    width: 50%;
-    float: left;
+    width: 100%;
+    float: none;
 }
 
 .input-field input {
@@ -10,7 +10,7 @@
     font-size: 22px;
     margin-bottom: 20px;
     margin-left: 44px;
-    width: 70%;
+    width: calc(100% - 44px);
     box-sizing: border-box;
     background: #fff;
     border: none;
@@ -18,6 +18,7 @@
     font-weight: 100;
     padding-left: 10px;
     margin-top: 10px;
+    padding-right: 20px;
 }
 
 .input-field label {
@@ -41,4 +42,15 @@
     font-weight: 300;
     background: #00000036;
     margin-top: 10px;
+}
+
+@media screen and (min-width: 600px) {
+    .input-field {
+        width: 50%;
+        float: left;
+    }
+
+    .input-field input { 
+        width: calc(100% - 64px);
+    }
 }
