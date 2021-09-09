@@ -1,19 +1,24 @@
 import classes from './Result.module.css'
 
 const Result = ({price, tipPercentage, people}) => {
-    //to fixed is rounding down too early perhaps?
-    const totalWithTip = (((parseInt(price) / 100 ) * parseInt(tipPercentage)) + parseInt(price)).toFixed(2)
-    const totalPerPeronWithTip = (totalWithTip / people).toFixed(2)
-    const costPerPerson = (price / people).toFixed(2)
+
+    const priceInt = parseFloat(price)
+    const tipPercentageInt = parseFloat(tipPercentage)
+    const peopleInt = parseFloat(people)
+
+
+    const totalWithTip = (((priceInt / 100 ) * tipPercentageInt) + priceInt)
+    const totalPerPeronWithTip = (totalWithTip / peopleInt)
+    const costPerPerson = (priceInt / peopleInt)
 
     return(
         <>
-        <p>Cost per person is: <strong>€{costPerPerson}</strong></p>
+        <p>Cost per person without tip is: <strong>€{costPerPerson.toFixed(2)}</strong></p>
         <p>Add a tip of <strong>{tipPercentage}%</strong></p>
         <h4>The Total is:</h4>
-        <p className={classes.result}><strong>€{totalWithTip}</strong></p>
+        <p className={classes.result}><strong>€{totalWithTip.toFixed(2)}</strong></p>
         <h4>The Total per person with tip is:</h4>
-        <p className={classes.result}>€{totalPerPeronWithTip}</p>
+        <p className={classes.result}>€{totalPerPeronWithTip.toFixed(2)}</p>
         </>
     )
 }

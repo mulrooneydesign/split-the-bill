@@ -28,8 +28,8 @@ const App = () => {
             <hr />
             <div className={classes.grid}>
                 <div>
-                    <InputField icon="€" id="price" type="number" name="price" onChange={onChangeBillHandler} title="The Bill" value="00.00"/>
-                    <InputField icon="#" id="people" type="number" name="people" onChange={onChangePriceHandler} title="Number of People" value="1"/>
+                    <InputField icon="€" id="price" type="number" step="any" name="price" onChange={onChangeBillHandler} title="The Bill" value="00.00"/>
+                    <InputField icon="#" id="people" type="number" step="any" name="people" onChange={onChangePriceHandler} title="Number of People" value="1"/>
                     <TipChooser onSaveTip={onChangeTipHandler} />
                     <p>Selected tip <strong>{tipPercentage}%</strong></p> 
                 </div>

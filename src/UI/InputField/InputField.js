@@ -10,6 +10,7 @@ const InputField = (props) => {
         type={props.type}
         name={props.name}
         onChange={props.onChange}
+        step={props.step}
         />
     </div>
   );
