@@ -36,7 +36,8 @@
     display: inline-block;
 }
 .currentButton {
-    background-color: black;
+    background-color: black !important;
+    color: #ffb1b1;
 }
 
 @media screen and (min-width: 600px) {
