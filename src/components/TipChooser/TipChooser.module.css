@@ -5,3 +5,7 @@
     margin-bottom: 10px;    
     font-size: 1rem;
 }
+
+.currentTip {
+    background-color: red!important;
+}

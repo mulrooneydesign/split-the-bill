@@ -3,7 +3,7 @@ import classes from './TipChooser.module.css'
 
 const TipChooser = (props) => {
 
-   const tipHandler = props.onSaveTip 
+  const tipHandler = props.onSaveTip 
 
   return (
     <>
