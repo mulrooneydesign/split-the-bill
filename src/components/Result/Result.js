@@ -13,7 +13,7 @@ const Result = ({ price, tipPercentage, people }) => {
     <>
       <p>
         Cost per person without tip is:{" "}
-        <strong>€{costPerPerson.toFixed(2)}</strong>
+        <strong>{!isNaN(costPerPerson) ? '€' + costPerPerson.toFixed(2) : 'Error'}</strong>
       </p>
       <p>
         Add a tip of <strong>{tipPercentage}%</strong>
@@ -21,16 +21,12 @@ const Result = ({ price, tipPercentage, people }) => {
       <h4>The total is:</h4>
       <p className={classes.result}>
         <strong>
-          {!isNaN(totalWithTip) 
-            ? "€" + totalWithTip.toFixed(2) 
-            : "Error"}
+          {!isNaN(totalWithTip) ? "€" + totalWithTip.toFixed(2) : "Error"}
         </strong>
       </p>
       <h4>The total per person with tip is:</h4>
       <p className={classes.result}>
-        {!isNaN(totalPerPeronWithTip)
-          ? "€" + totalPerPeronWithTip.toFixed(2)
-          : "Error"}{" "}
+        {!isNaN(totalPerPeronWithTip) ? "€" + totalPerPeronWithTip.toFixed(2) : "Error"}
       </p>
     </>
   );

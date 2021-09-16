@@ -5,7 +5,7 @@ import Result from './components/Result/Result'
 import TipChooser from './components/TipChooser/TipChooser';
 
 const numberValidation = (value) => {
-    if(value !== null && value > 0 && /^[1-9]\d*(\.\d+)?$/.test(value)) {
+    if(value !== null && value > 0 && /^[0-9]\d*(\.\d+)?$/.test(value)) {
         return true
     } else {
         return false
@@ -57,9 +57,10 @@ const App = () => {
                 <div>
                     <InputField icon="€" id="price" type="number" min="0" step="any" name="price" onChange={onChangePriceHandler} title="The Bill" value={billPrice} onError={priceError}/>
                     <InputField icon="#" id="people" type="number" min="0" step="any" name="people" onChange={onChangePeopleHandler} title="Number of People" value={people} onError={peopleError}/>
-                    <TipChooser onSaveTip={onChangeTipHandler} />
                     {priceError && <p className={classes.error}>Price must be numbers and a decimal only.</p>}
                     {peopleError && <p className={classes.error}>People must be a number only.</p>}
+                    <TipChooser onSaveTip={onChangeTipHandler} />
+
                     <p>Selected tip <strong>{tipPercentage}%</strong></p>
                 </div>
 
