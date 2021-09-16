@@ -44,6 +44,11 @@
     margin-top: 10px;
 }
 
+.input-field .hasError {
+    border: 1px solid #d03232;
+    background-color: #ffb1b1;
+}
+
 @media screen and (min-width: 600px) {
     .input-field {
         width: 50%;

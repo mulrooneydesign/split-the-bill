@@ -55,8 +55,8 @@ const App = () => {
             <hr />
             <div className={classes.grid}>
                 <div>
-                    <InputField icon="€" id="price" type="number" min="0" step="any" name="price" onChange={onChangePriceHandler} title="The Bill" value={billPrice}/>
-                    <InputField icon="#" id="people" type="number" min="0" step="any" name="people" onChange={onChangePeopleHandler} title="Number of People" value={people}/>
+                    <InputField icon="€" id="price" type="number" min="0" step="any" name="price" onChange={onChangePriceHandler} title="The Bill" value={billPrice} onError={priceError}/>
+                    <InputField icon="#" id="people" type="number" min="0" step="any" name="people" onChange={onChangePeopleHandler} title="Number of People" value={people} onError={peopleError}/>
                     <TipChooser onSaveTip={onChangeTipHandler} />
                     {priceError && <p className={classes.error}>Price must be numbers and a decimal only.</p>}
                     {peopleError && <p className={classes.error}>People must be a number only.</p>}

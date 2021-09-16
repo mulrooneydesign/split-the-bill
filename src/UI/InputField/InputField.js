@@ -7,6 +7,7 @@ const InputField = (props) => {
         <label htmlFor={props.id}>{props.title}</label> 
         <div className={classes.icon}>{props.icon}</div>
         <input
+        className={props.onError ? classes.hasError : ''}
         id={props.id}
         type={props.type}
         name={props.name}

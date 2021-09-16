@@ -23,6 +23,19 @@
     grid-template-columns: 1fr;
 }
 
+.error{
+    color: #d03232;
+    background: #ffb1b1;
+    padding: 5px 20px;
+    font-weight: bold;
+    border: 1px solid #ffb1b1;
+    border-radius: 2px;
+    margin-right: 20px;
+    font-size: 0.8rem;
+    text-align: center;
+    display: inline-block;
+}
+
 @media screen and (min-width: 600px) {
     .grid {
         grid-template-columns: 1fr 1fr;
