@@ -1,6 +1,7 @@
 import classes from "./InputField.module.css";
 
 const InputField = (props) => {
+
   return (
     <div className={classes['input-field']}>
         <label htmlFor={props.id}>{props.title}</label> 
