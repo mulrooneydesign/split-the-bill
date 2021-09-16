@@ -35,6 +35,9 @@
     text-align: center;
     display: inline-block;
 }
+.currentButton {
+    background-color: black;
+}
 
 @media screen and (min-width: 600px) {
     .grid {

@@ -29,7 +29,7 @@ const App = () => {
         setPeople(event.target.value)
     }
 
-    const onChangeTipHandler = (tip) => {  
+    const onChangeTipHandler = (tip) => { 
         setTipPercentage(tip)
     }
 
@@ -49,6 +49,23 @@ const App = () => {
     },
     [billPrice, people])
 
+    useEffect(() => {
+        const buttons = document.getElementsByTagName('button')
+
+            for(let button of buttons) {
+
+                button.addEventListener('click', (item) => {
+
+                    for(let button of buttons) {
+                        button.classList.remove(classes.currentButton)
+                    }
+
+                    item.target.classList.add(classes.currentButton)
+                })
+            }
+                    
+        }, [])
+
     return (
         <div className={classes.main}>
             <h1>Split the Bill</h1>
@@ -59,7 +76,7 @@ const App = () => {
                     <InputField icon="#" id="people" type="number" min="0" step="any" name="people" onChange={onChangePeopleHandler} title="Number of People" value={people} onError={peopleError}/>
                     {priceError && <p className={classes.error}>Price must be numbers and a decimal only.</p>}
                     {peopleError && <p className={classes.error}>People must be a number only.</p>}
-                    <TipChooser onSaveTip={onChangeTipHandler} />
+                    <TipChooser onSaveTip={onChangeTipHandler}/>
 
                     <p>Selected tip <strong>{tipPercentage}%</strong></p>
                 </div>
