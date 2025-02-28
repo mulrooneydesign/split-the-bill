@@ -8,13 +8,5 @@ Demo [https://pedantic-goldberg-56ea3d.netlify.app/](https://pedantic-goldberg-5
 
 In the project directory, you can run:
 
-### `npm run start`
+### `npm run dev`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will autoreloads when you make edits
-
-### `npm run test`
-
-### `npm run  build`
